@@ -103,7 +103,9 @@ var Slate = function() {
 		if(route.title !== null) {
 			$(document).attr("title", route.title);
 		}
-		replaceStyles(route.styles);
+		if(route.styles !== undefined) {
+			replaceStyles(route.styles);
+		}
 	}
 
 	function replaceStyles(styles) {

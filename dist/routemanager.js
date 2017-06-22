@@ -97,7 +97,7 @@ var RouteManager = function () {
 
 	function mergeStyles(route_id, result) {
 		var config = findConfig(route_id);
-		if(config !== null) {
+		if(config !== null && config.styles !== undefined) {
 			if(config.parent !== undefined) {
 				return mergeStyles(config.parent, result);
 			}
